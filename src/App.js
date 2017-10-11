@@ -1,15 +1,10 @@
-
 import React from 'react';
 import './App.css';
 import NavBar from './NavBar';
-import Banner from './Banner';
-import ActivitiesSection from './ActivitiesSection';
-import Footer from './Footer';
-
 
 const leftItems = [
-  { as: "a", content: "Home", key: "home" },
-  { as: "a", content: "About Us", key: "about-us" },
+  { as: "a", content: "Home", key: "home", href:'/'},
+  { as: "a", content: "About Us", key: "about-us", href:'/about'},
   { as: "a", content: "Team", key: "team" },
   { as: "a", content: "Activities", key: "activities" },
   { as: "a", content: "Live Data", key: "live-data" },
@@ -21,11 +16,7 @@ const rightItems = [
 ];
 
 const App = () => (
-  <NavBar leftItems={leftItems} rightItems={rightItems}>
-    <Banner/>
-    <ActivitiesSection/>
-    <Footer/>
-  </NavBar>
+  <NavBar leftItems={leftItems} rightItems={rightItems}/>
 );
 
 export default App;

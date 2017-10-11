@@ -8,6 +8,8 @@ import {
     Sidebar,
     Responsive
   } from "semantic-ui-react";
+import Main from './Main';
+import Footer from './Footer';
 
 const NavBarMobile = ({children, leftItems, onPusherClick, onToggle, rightItems, visible}) => (
     <Sidebar.Pushable>
@@ -29,7 +31,7 @@ const NavBarMobile = ({children, leftItems, onPusherClick, onToggle, rightItems,
             <Icon name="sidebar" />
           </Menu.Item>
           <Menu.Item>
-            <Image size="mini" src="../images/CHED.png"  />
+            <Image size="mini" src="../images/CHED.png" href='/' />
           </Menu.Item>
           <Menu.Menu position="right">
             {_.map(rightItems, item => <Menu.Item {...item} />)}
@@ -43,7 +45,7 @@ const NavBarMobile = ({children, leftItems, onPusherClick, onToggle, rightItems,
   const NavBarDesktop = ({ leftItems, rightItems }) => (
     <Menu fixed="top" borderless>
       <Menu.Item>
-        <Image size="medium" className="logo-desktop" src="../images/pcari.png"/>
+        <Image size="medium" className="logo-desktop" src="../images/pcari.png" href='/'/>
       </Menu.Item>
       
       {_.map(leftItems, item => <Menu.Item {...item} />)}
@@ -85,11 +87,15 @@ const NavBarMobile = ({children, leftItems, onPusherClick, onToggle, rightItems,
               visible={visible}
             >
               <NavBarChildren>{children}</NavBarChildren>
+              <Main />
+              <Footer />
             </NavBarMobile>
           </Responsive>
           <Responsive minWidth={Responsive.onlyTablet.minWidth}>
             <NavBarDesktop leftItems={leftItems} rightItems={rightItems} />
             <NavBarChildren>{children}</NavBarChildren>
+            <Main />
+            <Footer />
           </Responsive>
         </div>
       );
