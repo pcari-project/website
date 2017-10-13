@@ -2,6 +2,13 @@
 # yarn lockfile v1
 
 
+"@vimeo/player@^2.2.0":
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/@vimeo/player/-/player-2.2.0.tgz#4aef6ddf6e9794bd7d57d0134e21c96e494a0e4d"
+  dependencies:
+    es6-collections "0.5.6"
+    native-promise-only "0.8.1"
+
 abab@^1.0.3:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/abab/-/abab-1.0.4.tgz#5faad9c2c07f60dd76770f71cf025b62a63cfd4e"
@@ -1368,6 +1375,10 @@ clean-css@4.1.x:
   dependencies:
     source-map "0.5.x"
 
+clean-react-props@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/clean-react-props/-/clean-react-props-0.1.2.tgz#b237a6b206b5bff916cbb6260b35258553f064b9"
+
 cli-boxes@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/cli-boxes/-/cli-boxes-1.0.0.tgz#4fa917c3e59c94a004cd61f8ee509da651687143"
@@ -2098,6 +2109,10 @@ es5-ext@^0.10.14, es5-ext@^0.10.9, es5-ext@~0.10.14:
   dependencies:
     es6-iterator "2"
     es6-symbol "~3.1"
+
+es6-collections@0.5.6:
+  version "0.5.6"
+  resolved "https://registry.yarnpkg.com/es6-collections/-/es6-collections-0.5.6.tgz#5552e800ad12c1820cda2bd4a79ae7dbb03d89a2"
 
 es6-iterator@2, es6-iterator@^2.0.1, es6-iterator@~2.0.1:
   version "2.0.1"
@@ -3932,6 +3947,10 @@ load-json-file@^2.0.0:
     pify "^2.0.0"
     strip-bom "^3.0.0"
 
+load-script@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/load-script/-/load-script-1.0.0.tgz#0491939e0bee5643ee494a7e3da3d2bac70c6ca4"
+
 loader-fs-cache@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/loader-fs-cache/-/loader-fs-cache-1.0.1.tgz#56e0bf08bd9708b26a765b68509840c8dec9fdbc"
@@ -4011,6 +4030,10 @@ lodash.uniq@^4.5.0:
 loglevel@^1.4.1:
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/loglevel/-/loglevel-1.5.0.tgz#3863984a2c326b986fbb965f378758a6dc8a4324"
+
+lomit@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/lomit/-/lomit-0.1.1.tgz#b9270fa45d80a352cfdcf2d019a97e91d6ec21e6"
 
 longest@^1.0.1:
   version "1.0.1"
@@ -4230,6 +4253,10 @@ mute-stream@0.0.7:
 nan@^2.3.0:
   version "2.7.0"
   resolved "https://registry.yarnpkg.com/nan/-/nan-2.7.0.tgz#d95bf721ec877e08db276ed3fc6eb78f9083ad46"
+
+native-promise-only@0.8.1:
+  version "0.8.1"
+  resolved "https://registry.yarnpkg.com/native-promise-only/-/native-promise-only-0.8.1.tgz#20a318c30cb45f71fe7adfbf7b21c99c1472ef11"
 
 natural-compare@^1.4.0:
   version "1.4.0"
@@ -5220,6 +5247,16 @@ react-router@^4.2.0:
     prop-types "^15.5.4"
     warning "^3.0.0"
 
+react-video-players@^0.1.10:
+  version "0.1.10"
+  resolved "https://registry.yarnpkg.com/react-video-players/-/react-video-players-0.1.10.tgz#9c7075e1b3627fc9e8811633b8f93d083cd94129"
+  dependencies:
+    "@vimeo/player" "^2.2.0"
+    clean-react-props "^0.1.2"
+    lomit "^0.1.1"
+    prop-types "^15.5.10"
+    youtube-player "^5.4.0"
+
 "react@^15 || ^16", react@^15.6.1:
   version "15.6.1"
   resolved "https://registry.yarnpkg.com/react/-/react-15.6.1.tgz#baa8434ec6780bde997cdc380b79cd33b96393df"
@@ -5719,6 +5756,10 @@ shellwords@^0.1.0:
 signal-exit@^3.0.0, signal-exit@^3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.2.tgz#b5fdc08f1287ea1178628e415e25132b73646c6d"
+
+sister@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/sister/-/sister-3.0.0.tgz#88eb57047cb283da1e070b1a7cae8212f3bcb2db"
 
 slash@^1.0.0:
   version "1.0.0"
@@ -6676,3 +6717,11 @@ yargs@~3.10.0:
     cliui "^2.1.0"
     decamelize "^1.0.0"
     window-size "0.1.0"
+
+youtube-player@^5.4.0:
+  version "5.4.0"
+  resolved "https://registry.yarnpkg.com/youtube-player/-/youtube-player-5.4.0.tgz#9e3fc8a1fcae6a6cc89140e7add7c7cd86299d6e"
+  dependencies:
+    debug "^2.6.6"
+    load-script "^1.0.0"
+    sister "^3.0.0"
