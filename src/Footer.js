@@ -12,7 +12,7 @@ const Footer = () =>
                             <List link inverted>
                                 <List.Item as='a' href='/'>Homepage</List.Item>
                                 <List.Item as='a' href='/about'>About</List.Item>
-                                <List.Item as='a'>Team</List.Item>
+                                <List.Item as='a' href='/team'>Team</List.Item>
                                 <List.Item as='a'>Activities</List.Item>
                                 <List.Item as='a'>Live Data</List.Item>
                             </List>
