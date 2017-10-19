@@ -8,7 +8,7 @@ const leftItems = [
   { as: "a", content: "Team", key: "team", href:'/team'},
   { as: "a", content: "Activities", key: "activities", href:'/activities' },
   { as: "a", content: "Live Data", key: "live-data" },
-  { as: "a", content: "Contact", key: "contact" }
+  { as: "a", content: "Contact", key: "contact", href:'/contact' }
 ];
 const rightItems = [
   { as: "a", content: "Login", key: "login" },
