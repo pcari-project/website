@@ -1,3 +1,5 @@
+// TO-DO: Pagination and photos page of each activity
+
 import React from 'react';
 import { Container, Header, Item, Icon, Button, Label } from 'semantic-ui-react';
 
