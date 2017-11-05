@@ -1,5 +1,5 @@
 {
-  "name": "activities",
+  "name": "activity",
   "plural": "activities",
   "base": "PersistedModel",
   "idInjection": true,
@@ -12,6 +12,14 @@
       "required": true
     },
     "description": {
+      "type": "string",
+      "required": true
+    },
+    "tags": {
+      "type": "string",
+      "required": true
+    },
+    "venue": {
       "type": "string",
       "required": true
     },
