@@ -35,7 +35,7 @@
     "dataSource": "db",
     "public": false
   },
-  "activities": {
+  "activity": {
     "dataSource": "db",
     "public": true
   }
