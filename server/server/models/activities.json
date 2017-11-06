@@ -1,0 +1,57 @@
+{
+  "name": "activity",
+  "plural": "activities",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string",
+      "required": true
+    },
+    "tags": {
+      "type": "string",
+      "required": true
+    },
+    "venue": {
+      "type": "string",
+      "required": true
+    },
+    "active": {
+      "type": "boolean",
+      "required": true,
+      "default": true
+    },
+    "date": {
+      "type": "string",
+      "required": true
+    },
+    "created": {
+      "type": "date",
+      "required": true
+    },
+    "modified": {
+      "type": "date",
+      "required": true
+    },
+    "thumbnail": {
+      "type": "string",
+      "required": true
+    },
+    "photos": {
+      "type": [
+        "string"
+      ]
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
