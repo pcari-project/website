@@ -97,7 +97,7 @@ class ActivitiesSection extends Component {
                         </Card.Content>
                         <Card.Content extra>
                             <Icon name='calendar' />
-                            {activity.created}
+                            {activity.date}
                         </Card.Content>
                     </Card>
                 </Grid.Column>
