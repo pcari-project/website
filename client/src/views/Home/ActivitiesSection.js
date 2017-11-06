@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Container, Grid, Image, Card, Header, Icon, Menu } from 'semantic-ui-react'
-
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 class ActivitiesSection extends Component {
@@ -88,7 +88,7 @@ class ActivitiesSection extends Component {
                     <Card>
                         <a><Image src={thumbnail} /></a>
                         <Card.Content>
-                        <Card.Header>
+                        <Card.Header as={Link} to={`/activities-photos/${activity.id}`}>
                             {activity.name}
                         </Card.Header>
                         <Card.Description>
