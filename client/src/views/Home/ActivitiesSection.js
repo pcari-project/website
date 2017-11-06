@@ -103,21 +103,23 @@ class ActivitiesSection extends Component {
         });
 
         return (
-            <Container style={{padding: '1.75em'}} textAlign='center'>
+            <Container style={{padding: '1.75em'}}>
                 <Header as='h2' textAlign='center'>Recent Activities</Header>
                 <Card.Group stackable itemsPerRow={4}>
                     {item}
                 </Card.Group>
 
-                <Menu pagination style={{margin: '0.7em'}}>
-                <Menu.Item as='a' onClick={this.handleItemClickLeft} icon>
-                    <Icon name='left chevron' />
-                </Menu.Item>
-                {renderPageNumbers}
-                <Menu.Item  as='a' onClick={this.handleItemClickRight} icon>
-                    <Icon name='right chevron' />
-                </Menu.Item>
-                </Menu>
+                <Container textAlign='center'>
+                    <Menu pagination style={{margin: '0.7em'}}>
+                    <Menu.Item as='a' onClick={this.handleItemClickLeft} icon>
+                        <Icon name='left chevron' />
+                    </Menu.Item>
+                    {renderPageNumbers}
+                    <Menu.Item  as='a' onClick={this.handleItemClickRight} icon>
+                        <Icon name='right chevron' />
+                    </Menu.Item>
+                    </Menu>
+                </Container>
             </Container>
         );
     }
