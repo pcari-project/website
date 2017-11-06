@@ -103,7 +103,7 @@ class ActivitiesSection extends Component {
         });
 
         return (
-            <Container style={{padding: '1.75em'}}>
+            <Container style={{padding: '1.75em'}} textAlign='center'>
                 <Header as='h2' textAlign='center'>Recent Activities</Header>
                 <Card.Group stackable itemsPerRow={4}>
                     {item}
