@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Container, Grid, Image, Card, Header, Icon, Menu } from 'semantic-ui-react'
-
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 class ActivitiesSection extends Component {
@@ -84,32 +84,30 @@ class ActivitiesSection extends Component {
         let item = currentData.map(activity => {
             const thumbnail = activity.thumbnail;
             return (
-                <Grid.Column>
-                    <Card>
-                        <a><Image src={thumbnail} /></a>
-                        <Card.Content>
-                        <Card.Header>
-                            {activity.name}
-                        </Card.Header>
-                        <Card.Description>
-                            {activity.description}
-                        </Card.Description>
-                        </Card.Content>
-                        <Card.Content extra>
-                            <Icon name='calendar' />
-                            {activity.date}
-                        </Card.Content>
-                    </Card>
-                </Grid.Column>
+                <Card>
+                    <Image src={thumbnail} />
+                    <Card.Content>
+                    <Card.Header as={Link} to={`/activities-photos/${activity.id}`}>
+                        {activity.name}
+                    </Card.Header>
+                    <Card.Description>
+                        {activity.description}
+                    </Card.Description>
+                    </Card.Content>
+                    <Card.Content extra>
+                        <Icon name='calendar' />
+                        {activity.date}
+                    </Card.Content>
+                </Card>
             )
         });
 
         return (
             <Container style={{padding: '1.75em'}}>
                 <Header as='h2' textAlign='center'>Recent Activities</Header>
-                <Grid doubling stackable columns={4}>
+                <Card.Group stackable itemsPerRow={4}>
                     {item}
-                </Grid>
+                </Card.Group>
 
                 <Menu pagination style={{margin: '0.7em'}}>
                 <Menu.Item as='a' onClick={this.handleItemClickLeft} icon>
