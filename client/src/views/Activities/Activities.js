@@ -3,6 +3,7 @@
 import React, { Component } from 'react';
 import { Container, Header, Item, Icon, Button, Label, Menu, Divider } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
+import Moment from 'react-moment';
 import axios from 'axios';
 
 class Activities extends Component{
@@ -91,18 +92,19 @@ class Activities extends Component{
                     <Item.Image src={thumbnail} />
             
                     <Item.Content>
-                    <Item.Header>{activity.name}</Item.Header>
-                    <Item.Meta>
-                        <span className='cinema'>{activity.venue}</span>
-                    </Item.Meta>
-                    <Item.Description>{activity.description}</Item.Description>
-                    <Item.Extra>
-                        <Button primary floated='right' as={Link} to={`/activities-photos/${activity.id}`}>
-                        View photos
-                        <Icon name='right chevron' />
-                        </Button>
-                        <Label as='a'>{activity.tags}</Label>
-                    </Item.Extra>
+                        <Item.Header>{activity.name}</Item.Header>
+                        <Item.Meta>
+                            <Icon name='calendar' />
+                            <Moment format='ddd ll' date={activity.date} />
+                        </Item.Meta>
+                        <Item.Description>{activity.description}</Item.Description>
+                        <Item.Extra>
+                            <Button primary floated='right' as={Link} to={`/activities-photos/${activity.id}`}>
+                            View photos
+                            <Icon name='right chevron' />
+                            </Button>
+                            <Label as='a'>{activity.tags}</Label>
+                        </Item.Extra>
                     </Item.Content>
                 </Item>
             )

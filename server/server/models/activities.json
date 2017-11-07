@@ -29,7 +29,7 @@
       "default": true
     },
     "date": {
-      "type": "string",
+      "type": "date",
       "required": true
     },
     "created": {
