@@ -47,7 +47,7 @@ class ActivitiesPhotos extends Component {
         return(
             <Container style={{padding: '1.75em'}}>
                 <Header as='h2'>
-                    <a href='/activities'><Icon name='arrow left'/></a>
+                    <a href='/activities' title='Go to Activities'><Icon name='arrow left'/></a>
                     <Header.Content>
                         {title}
                         <Header.Subheader>
