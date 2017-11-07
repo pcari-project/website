@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Container, Image, Card, Header, Icon, Menu } from 'semantic-ui-react'
 import { Link } from 'react-router-dom';
+import Moment from 'react-moment';
 import axios from 'axios';
 
 class ActivitiesSection extends Component {
@@ -96,7 +97,7 @@ class ActivitiesSection extends Component {
                     </Card.Content>
                     <Card.Content extra>
                         <Icon name='calendar' />
-                        {activity.date}
+                        <Moment format='ddd ll' date={activity.date} />
                     </Card.Content>
                 </Card>
             )

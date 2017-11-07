@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Moment from 'react-moment';
 import axios from 'axios';
 
 import { Container, Image, Header, Grid, Modal, Icon } from 'semantic-ui-react'
@@ -51,7 +52,7 @@ class ActivitiesPhotos extends Component {
                     <Header.Content>
                         {title}
                         <Header.Subheader>
-                            {date}
+                            <Icon name='calendar' /><Moment format='ddd ll' date={date} />
                         </Header.Subheader>
                     </Header.Content>
                 </Header>
