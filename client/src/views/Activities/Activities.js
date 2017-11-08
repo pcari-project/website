@@ -1,9 +1,7 @@
-// TO-DO: Pagination and photos page of each activity
-
 import React, { Component } from 'react';
 import { Container, Header, Item, Icon, Button, Label, Menu, Divider } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
-import Moment from 'react-moment';
+import moment from 'moment';
 import axios from 'axios';
 
 class Activities extends Component{
@@ -95,7 +93,7 @@ class Activities extends Component{
                         <Item.Header>{activity.name}</Item.Header>
                         <Item.Meta>
                             <Icon name='calendar' />
-                            <Moment format='ddd ll' date={activity.date} />
+                            {moment(activity.date).format('ddd ll')}
                         </Item.Meta>
                         <Item.Description>{activity.description}</Item.Description>
                         <Item.Extra>
