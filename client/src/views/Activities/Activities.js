@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Header, Item, Icon, Button, Label, Menu, Divider } from 'semantic-ui-react';
+import { Container, Header, Item, Icon, Button, Menu, Divider } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 import moment from 'moment';
 import axios from 'axios';
@@ -87,13 +87,13 @@ class Activities extends Component{
             const thumbnail = activity.thumbnail;
             return (
                 <Item>
-                    <Item.Image src={thumbnail} />
+                    <Item.Image height='131' width='175' src={thumbnail} />
             
                     <Item.Content>
                         <Item.Header>{activity.name}</Item.Header>
                         <Item.Meta>
-                            <Icon name='calendar' />
-                            {moment(activity.date).format('ddd ll')}
+                            <Icon name='calendar' /> {moment(activity.date).format('ddd ll')}
+                            <Icon name='marker' /> {activity.venue}
                         </Item.Meta>
                         <Item.Description>{activity.description}</Item.Description>
                         <Item.Extra>
@@ -101,7 +101,7 @@ class Activities extends Component{
                             View photos
                             <Icon name='right chevron' />
                             </Button>
-                            <Label as='a'>{activity.tags}</Label>
+                            {/* <Label as='a'>{activity.tags}</Label> */}
                         </Item.Extra>
                     </Item.Content>
                 </Item>

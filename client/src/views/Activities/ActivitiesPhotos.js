@@ -9,7 +9,9 @@ class ActivitiesPhotos extends Component {
         super(props);
         this.state = {
             title: '',
+            description: '',
             date:'',
+            venue:'',
             details: []
         }
     }
@@ -22,7 +24,7 @@ class ActivitiesPhotos extends Component {
         let activityId = this.props.match.params.id;
         axios.get(`http://localhost:3100/api/activities/${activityId}`)
         .then(response => {
-            this.setState({title: response.data.name, date: response.data.date, details: response.data.photos}, () => {
+            this.setState({title: response.data.name, description: response.data.description, date: response.data.date, venue: response.data.venue, details: response.data.photos}, () => {
                 console.log(this.state.details)
             })
         })
@@ -31,12 +33,14 @@ class ActivitiesPhotos extends Component {
 
     render(){
         let title = this.state.title;
+        let description = this.state.description;
         let date = this.state.date;
+        let venue = this.state.venue;
         const photo = this.state.details.map((activity) => {
             return(
                 <Grid.Column>
                     <Modal size='small' trigger={
-                        <Image src={activity}/>
+                        <Image height='190' width='250' src={activity}/>
                     } closeIcon>
                         <Modal.Content image>
                             <Image wrapped size='huge' src={activity}/>
@@ -52,8 +56,11 @@ class ActivitiesPhotos extends Component {
                     <Header.Content>
                         {title}
                         <Header.Subheader>
-                            <Icon name='calendar' />
-                            {moment(date).format('ddd ll')}
+                            <p>
+                                <Icon name='calendar' /> {moment(date).format('ddd ll')}
+                                <Icon name='marker' /> {venue}
+                            </p>
+                            {description}
                         </Header.Subheader>
                     </Header.Content>
                 </Header>
