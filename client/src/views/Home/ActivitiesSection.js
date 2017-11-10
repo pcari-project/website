@@ -86,18 +86,20 @@ class ActivitiesSection extends Component {
             const thumbnail = activity.thumbnail;
             return (
                 <Card>
-                    <Image src={thumbnail} />
+                    <Image centered height='190' width='250' src={thumbnail} />
                     <Card.Content>
                     <Card.Header as={Link} to={`/activities-photos/${activity.id}`}>
                         {activity.name}
                     </Card.Header>
+                    <Card.Meta>
+                        <Icon name='calendar' /> {moment(activity.date).format('ddd ll')}
+                    </Card.Meta>
                     <Card.Description>
                         {activity.description}
                     </Card.Description>
                     </Card.Content>
                     <Card.Content extra>
-                        <Icon name='calendar' />
-                        {moment(activity.date).format('ddd ll')}
+                        <Icon name='marker' /> {activity.venue}
                     </Card.Content>
                 </Card>
             )
@@ -112,13 +114,13 @@ class ActivitiesSection extends Component {
 
                 <Container textAlign='center'>
                     <Menu pagination style={{margin: '0.7em'}}>
-                    <Menu.Item as='a' onClick={this.handleItemClickLeft} icon>
-                        <Icon name='left chevron' />
-                    </Menu.Item>
-                    {renderPageNumbers}
-                    <Menu.Item  as='a' onClick={this.handleItemClickRight} icon>
-                        <Icon name='right chevron' />
-                    </Menu.Item>
+                        <Menu.Item as='a' onClick={this.handleItemClickLeft} icon>
+                            <Icon name='left chevron' />
+                        </Menu.Item>
+                        {renderPageNumbers}
+                        <Menu.Item  as='a' onClick={this.handleItemClickRight} icon>
+                            <Icon name='right chevron' />
+                        </Menu.Item>
                     </Menu>
                 </Container>
             </Container>
