@@ -42,5 +42,9 @@
   "team": {
     "dataSource": "db",
     "public": true
+  },
+  "email": {
+    "dataSource": "Email",
+    "public": true
   }
 }
