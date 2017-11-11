@@ -92,8 +92,8 @@ class Activities extends Component{
                     <Item.Content>
                         <Item.Header as={Link} to={`/activities-photos/${activity.id}`}>{activity.name}</Item.Header>
                         <Item.Meta>
-                            <Icon name='calendar' /> {moment(activity.date).format('ddd ll')}
-                            <Icon name='marker' /> {activity.venue}
+                            <Icon name='calendar' />{moment(activity.date).format('ddd ll')}
+                            <Icon name='marker' />{activity.venue}
                         </Item.Meta>
                         <Item.Description>{activity.description}</Item.Description>
                         <Item.Extra>
