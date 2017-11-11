@@ -86,7 +86,7 @@ class ActivitiesSection extends Component {
             const thumbnail = activity.thumbnail;
             return (
                 <Card>
-                    <Image centered height='190' width='250' src={thumbnail} />
+                    <a href={`/activities-photos/${activity.id}`}><Image centered height='190' width='250' src={thumbnail} /></a>
                     <Card.Content>
                     <Card.Header as={Link} to={`/activities-photos/${activity.id}`}>
                         {activity.name}

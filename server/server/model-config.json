@@ -38,5 +38,9 @@
   "activity": {
     "dataSource": "db",
     "public": true
+  },
+  "team": {
+    "dataSource": "db",
+    "public": true
   }
 }
