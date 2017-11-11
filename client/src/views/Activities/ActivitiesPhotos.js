@@ -52,15 +52,13 @@ class ActivitiesPhotos extends Component {
         return(
             <Container style={{padding: '1.75em'}}>
                 <Header as='h2'>
-                    <a href='/activities' title='Go to Activities'><Icon name='arrow left'/></a>
+                    <a href='/activities'><Icon name='arrow left' link title='Go to Activities'/></a>
                     <Header.Content>
                         {title}
                         <Header.Subheader>
-                            <p>
-                                <Icon name='calendar' /> {moment(date).format('ddd ll')}
-                                <Icon name='marker' /> {venue}
-                            </p>
-                            {description}
+                            <Icon name='calendar' />{moment(date).format('ddd ll')}
+                            <Icon name='marker' />{venue}
+                            <p>{description}</p>
                         </Header.Subheader>
                     </Header.Content>
                 </Header>

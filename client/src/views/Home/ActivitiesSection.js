@@ -92,14 +92,14 @@ class ActivitiesSection extends Component {
                         {activity.name}
                     </Card.Header>
                     <Card.Meta>
-                        <Icon name='calendar' /> {moment(activity.date).format('ddd ll')}
+                        <Icon name='calendar' />{moment(activity.date).format('ddd ll')}
                     </Card.Meta>
                     <Card.Description>
                         {activity.description}
                     </Card.Description>
                     </Card.Content>
                     <Card.Content extra>
-                        <Icon name='marker' /> {activity.venue}
+                        <Icon name='marker' />{activity.venue}
                     </Card.Content>
                 </Card>
             )
