@@ -2,20 +2,40 @@
 
 import React, { Component } from 'react';
 import { Container, Header, Grid, Icon, Embed, Form, Button } from 'semantic-ui-react';
+import axios from 'axios';
 
 class Contact extends Component {
-    state = { name: '', email: '', message: '', subject: '', submittedName: '', submittedEmail: '', submittedSubject: '', submittedMessage: '' }
-    
+    constructor(props) {
+        super(props);
+        this.state = { name: '', email: '', subject: '', message: '' }
+    }
+
     handleChange = (e, { name, value }) => this.setState({ [name]: value })
 
     handleSubmit = () => {
     const { name, email, subject, message } = this.state
+    const data = {
+        name: name,
+        email: email,
+        subject: subject,
+        message: message
+    }
+    const table = 'emails';
+    const serverUrl = 'http://localhost:3100/api/' + table;
+    axios.post(`${serverUrl}/sendEmail`, data)
+    .then(res => {
+        alert(`Thank you, ${name}. Your email has been sent.`)
+    })
+    .catch(err => {
+        alert(err);
+        console.error(err);
+    });
 
-    this.setState({ submittedName: name, submittedEmail: email, submittedSubject: subject, submittedMessage: message, email: '', name: '', subject: '', message: '' })
+    this.setState({ email: '', name: '', subject: '', message: '' })
     }
 
     render() {
-        const { name, email, subject, message, submittedName, submittedEmail, submittedSubject, submittedMessage } = this.state
+        const { name, email, subject, message } = this.state
         return (
             <Container style={{padding: '1.75em'}}>
                 <Header as='h2'>Contact</Header>
@@ -77,7 +97,7 @@ class Contact extends Component {
                     <Grid.Column mobile={16} tablet={6} computer={6} >
                         <Header as='h2' icon textAlign='center'>Get In Touch</Header>
 
-                        <Form onSubmit={this.handleSubmit}>
+                        <Form method='POST' onSubmit={this.handleSubmit}>
                             <Form.Input icon='user' iconPosition='left' placeholder='Name' name='name' value={name} onChange={this.handleChange} />
                             <Form.Input icon='mail' iconPosition='left' placeholder='Email' name='email' value={email} onChange={this.handleChange} />
                             <Form.Input icon='write' iconPosition='left' placeholder='Subject' name='subject' value={subject} onChange={this.handleChange} />
@@ -91,11 +111,6 @@ class Contact extends Component {
                             </Button>
                             </center>
                         </Form>
-                        
-                        {/* <strong>onChange:</strong>
-                        <pre>{JSON.stringify({ name, email, subject, message }, null, 2)}</pre>
-                        <strong>onSubmit:</strong>
-                        <pre>{JSON.stringify({ submittedName, submittedEmail, submittedSubject, submittedMessage }, null, 2)}</pre>        */}
                     </Grid.Column>
                 </Grid>
             </Container>
