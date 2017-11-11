@@ -87,10 +87,10 @@ class Activities extends Component{
             const thumbnail = activity.thumbnail;
             return (
                 <Item>
-                    <Item.Image height='131' width='175' src={thumbnail} />
+                    <Item.Image as={Link} to={`/activities-photos/${activity.id}`} height='131' width='175' src={thumbnail} />
             
                     <Item.Content>
-                        <Item.Header>{activity.name}</Item.Header>
+                        <Item.Header as={Link} to={`/activities-photos/${activity.id}`}>{activity.name}</Item.Header>
                         <Item.Meta>
                             <Icon name='calendar' /> {moment(activity.date).format('ddd ll')}
                             <Icon name='marker' /> {activity.venue}
