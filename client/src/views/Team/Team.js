@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Container, Header, Grid, Item, Image, Modal, Icon } from 'semantic-ui-react';
-
+import { Container, Header, Grid, Item, Image, Modal, Icon, Divider } from 'semantic-ui-react';
+import ReactMarkdown from 'react-markdown';
 import axios from 'axios';
 
 class Team extends Component{
@@ -54,9 +54,13 @@ class Team extends Component{
                             <Image src={team.image}height='160' />
         
                             <Modal.Description>
-                                <Header>{team.name}</Header>
-                                <Icon name='mail' /><a href={`mailto:${team.email}`}>{team.email}</a>
-                                <p style={{marginTop:'1em'}}>{team.profile}</p>
+                                <Header>{team.name}
+                                    <Header.Subheader>
+                                        <Icon name='mail' /><a href={`mailto:${team.email}`}>{team.email}</a>
+                                    </Header.Subheader>
+                                </Header>
+                                <Divider />
+                                <ReactMarkdown source={team.profile} />
                             </Modal.Description>
                         </Modal.Content>
                     </Modal>
