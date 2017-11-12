@@ -19,7 +19,7 @@ class Activities extends Component{
     }
 
     fetch(serverUrl){
-        axios.get(`${serverUrl}?filter={"where":{"active":true}}`)
+        axios.get(`${serverUrl}?filter={"where":{"active":true},"order":"date%20ASC"}`)
         .then(res => {
             this.setState({ data: res.data });
         })
