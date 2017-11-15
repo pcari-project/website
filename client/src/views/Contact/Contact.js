@@ -71,7 +71,7 @@ class Contact extends Component {
                             Office
                         </Header.Content>
                         <Header.Subheader>
-                            CEAT Building A Room 110, LWRD, CEAT, University of the Philippines Los Banos (UPLB)
+                            CEAT Building A Room 110, LWRD, IAE, CEAT, University of the Philippines Los Banos (UPLB)
                         </Header.Subheader>
                     </Header>
                     </Grid.Column>
