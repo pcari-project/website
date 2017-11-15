@@ -87,7 +87,7 @@ class Contact extends Component {
                                 style: {
                                     padding: 5,
                                 },
-                                src: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d683.8735567231035!2d121.24503353883053!3d14.161181242646512!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bd60b49de22615%3A0x72571b4b0d57f53d!2sEngineering+and+Agro-Industrial+Technology!5e0!3m2!1sen!2sph!4v1508258705171'
+                                src: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3868.5769734296796!2d121.24336781483518!3d14.160950090083652!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bd60b702d05d5f%3A0x88d32fa754fff199!2sUPLB+-+Land+and+Water+Resources+Division!5e0!3m2!1sen!2sph!4v1510726382874'
                             }}
                             active
                         />
