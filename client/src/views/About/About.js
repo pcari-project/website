@@ -12,7 +12,7 @@ const About = () => (
                 placeholder=''
                 source='youtube'
             />
-            <a href='/team' style={{float:'right'}}>Meet the entire team <Icon name='arrow circle right' /></a>
+            <a href='/team' title='Meet the entire team' style={{float:'right'}}>Meet the entire team <Icon name='arrow circle right' /></a>
         </Container>
     </Container>
 )
