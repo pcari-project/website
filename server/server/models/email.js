@@ -6,12 +6,10 @@ module.exports = function(Email) {
         // console.log(req.body);
         const { name, email, subject, message} = req.body;
         const output = `
-            <h3>Contact Details</h3>
-            Name: ${name}<br>
-            Email: ${email}
-            <h3>Inquiry</h3>
-            Subject: ${subject}<br>
-            Message: ${message}
+            <strong>Name:</strong> ${name}<br>
+            <strong>Email:</strong> ${email}<br><br>
+            <strong>Subject:</strong> ${subject}<br>
+            <strong>Message:</strong> ${message}
         `;
         Email.app.models.Email.send({
             to: 'projectpcari@gmail.com',
