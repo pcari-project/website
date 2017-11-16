@@ -35,7 +35,7 @@ class Contact extends Component {
     render() {
         const { name, email, subject, message } = this.state
         return (
-            <Container style={{padding: '1.75em'}}>
+            <Container className='body'>
                 <Header as='h2'>Contact</Header>
                 <Grid doubling columns={3}>
                     <Grid.Column>
@@ -99,7 +99,7 @@ class Contact extends Component {
                             <Form.Input icon='user' iconPosition='left' placeholder='Name' name='name' value={name} onChange={this.handleChange} />
                             <Form.Input icon='mail' iconPosition='left' placeholder='Email' name='email' value={email} onChange={this.handleChange} />
                             <Form.Input icon='write' iconPosition='left' placeholder='Subject' name='subject' value={subject} onChange={this.handleChange} />
-                            <Form.TextArea placeholder='Message' name='message' value={message} onChange={this.handleChange} style={{ minHeight: 100 }} />
+                            <Form.TextArea placeholder='Message' name='message' value={message} onChange={this.handleChange} />
                             <center>
                             <Button animated='vertical'>
                                 <Button.Content hidden>Send</Button.Content>

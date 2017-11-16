@@ -1,9 +1,10 @@
 import React from 'react';
 import { Grid, Header, List, Segment, Container, Icon, Image } from 'semantic-ui-react'
+import './Footer.css';
 
 const Footer = () =>
     (
-        <Segment inverted vertical style={{ padding: '5em 0em' }}>
+        <Segment inverted vertical className='footer'>
             <Container>
                 <Grid divided inverted stackable>
                     <Grid.Row>
@@ -33,11 +34,11 @@ const Footer = () =>
                             </List>
                         </Grid.Column>
                         <Grid.Column width={4} textAlign='center'>
-                            {/* <Image src='images/PCARI.png' width='200' title='Philippine-California Advanced Research Institutes' style={{display:'inline-block', margin:'0.2em'}} /><br/> */}
-                            <Image src='images/CHED.png' width='60' title='Commission on Higher Education' style={{display:'inline-block', margin:'0.2em'}} />
-                            <Image src='images/UPLB.png' width='70' title='University of the Philippines Los Baños' style={{display:'inline-block', margin:'0.2em'}} />
-                            <Image src='images/UCB.png' width='65' title='University of California, Berkeley' style={{display:'inline-block', margin:'0.2em'}} /><br/>
-                            <Icon name='copyright' style={{marginTop:'0.5em'}}/> 2017
+                            {/* <Image src='images/PCARI.png' width='200' title='Philippine-California Advanced Research Institutes' className='partner-logos' /><br/> */}
+                            <Image src='images/CHED.png' width='60' title='Commission on Higher Education' className='partner-logos' />
+                            <Image src='images/UPLB.png' width='70' title='University of the Philippines Los Baños' className='partner-logos' />
+                            <Image src='images/UCB.png' width='65' title='University of California, Berkeley' className='partner-logos' /><br/>
+                            <Icon name='copyright' /> 2017
                         </Grid.Column>
                     </Grid.Row>
                 </Grid>

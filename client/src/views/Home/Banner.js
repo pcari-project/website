@@ -1,12 +1,13 @@
 import React from 'react';
 import { Image } from "semantic-ui-react";
+import './Banner.css';
 
 const Banner = () =>
  (
-    <div style={{position: 'relative', textAlign:'center', color: 'rgb(37, 34, 34)'}}>
+    <div className='banner-div'>
         <Image src='images/banner2.JPG' width='100%'/>
-        <div style={{position: 'absolute', top: '30%', left: '50%', right: '2%'}}>
-            <p style={{fontSize:'2.5vw', fontWeight: 'bold', fontFamily: 'open sans'}}>Development of Wireless Sensor Network-Based Water Information System for Efficient Irrigation Water Management in the Philippines</p>
+        <div className='banner-text-div'>
+            <p className='banner-text'>Development of Wireless Sensor Network-Based Water Information System for Efficient Irrigation Water Management in the Philippines</p>
         </div>
     </div>
  )
