@@ -1,5 +1,3 @@
-// TO-DO: Send e-mails directly from the contact form
-
 import React, { Component } from 'react';
 import { Container, Header, Grid, Icon, Embed, Form, Button } from 'semantic-ui-react';
 import axios from 'axios';

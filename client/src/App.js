@@ -10,10 +10,10 @@ const leftItems = [
   { as: "a", content: "Live Data", key: "live-data" },
   { as: "a", content: "Contact", key: "contact", href:'/contact' }
 ];
-const rightItems = [
-  { as: "a", content: "Login", key: "login" },
-  { as: "a", content: "Register", key: "register" }
-];
+// const rightItems = [
+//   { as: "a", content: "Login", key: "login" },
+//   { as: "a", content: "Register", key: "register" }
+// ];
 
 const App = () => (
   <NavBar leftItems={leftItems} /*rightItems={rightItems}*/ />

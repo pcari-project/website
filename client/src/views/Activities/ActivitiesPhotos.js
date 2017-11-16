@@ -25,7 +25,7 @@ class ActivitiesPhotos extends Component {
         axios.get(`http://localhost:3100/api/activities/${activityId}`)
         .then(response => {
             this.setState({title: response.data.name, description: response.data.description, date: response.data.date, venue: response.data.venue, details: response.data.photos}, () => {
-                console.log(this.state.details)
+                // console.log(this.state.details)
             })
         })
         .catch(err => console.log(err));

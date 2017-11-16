@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Header, Icon, Segment, Embed } from 'semantic-ui-react';
+import { Container, Header, Icon, Embed } from 'semantic-ui-react';
 
 const About = () => (
     <Container style={{padding: '1.75em'}}>
