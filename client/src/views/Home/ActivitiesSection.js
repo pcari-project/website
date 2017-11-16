@@ -3,6 +3,7 @@ import { Container, Image, Card, Header, Icon, Menu } from 'semantic-ui-react'
 import { Link } from 'react-router-dom';
 import moment from 'moment';
 import axios from 'axios';
+import './ActivitiesSection.css';
 
 class ActivitiesSection extends Component {
     constructor(props) {
@@ -106,14 +107,14 @@ class ActivitiesSection extends Component {
         });
 
         return (
-            <Container style={{padding: '1.75em'}}>
+            <Container className='body-container'>
                 <Header as='h2' textAlign='center'>Recent Activities</Header>
                 <Card.Group stackable itemsPerRow={4}>
                     {item}
                 </Card.Group>
 
                 <Container textAlign='center'>
-                    <Menu pagination style={{margin: '0.7em'}}>
+                    <Menu pagination className='pagination'>
                         <Menu.Item as='a' onClick={this.handleItemClickLeft} icon>
                             <Icon name='left chevron' />
                         </Menu.Item>
