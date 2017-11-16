@@ -33,10 +33,10 @@ const Footer = () =>
                             </List>
                         </Grid.Column>
                         <Grid.Column width={4} textAlign='center'>
-                            {/* <Image src='../images/PCARI.png' width='200' title='Philippine-California Advanced Research Institutes' style={{display:'inline-block', margin:'0.2em'}} /><br/> */}
-                            <Image src='../images/CHED.png' width='60' title='Commission on Higher Education' style={{display:'inline-block', margin:'0.2em'}} />
-                            <Image src='../images/UPLB.png' width='70' title='University of the Philippines Los Baños' style={{display:'inline-block', margin:'0.2em'}} />
-                            <Image src='../images/UCB.png' width='65' title='University of California, Berkeley' style={{display:'inline-block', margin:'0.2em'}} /><br/>
+                            {/* <Image src='images/PCARI.png' width='200' title='Philippine-California Advanced Research Institutes' style={{display:'inline-block', margin:'0.2em'}} /><br/> */}
+                            <Image src='images/CHED.png' width='60' title='Commission on Higher Education' style={{display:'inline-block', margin:'0.2em'}} />
+                            <Image src='images/UPLB.png' width='70' title='University of the Philippines Los Baños' style={{display:'inline-block', margin:'0.2em'}} />
+                            <Image src='images/UCB.png' width='65' title='University of California, Berkeley' style={{display:'inline-block', margin:'0.2em'}} /><br/>
                             <Icon name='copyright' style={{marginTop:'0.5em'}}/> 2017
                         </Grid.Column>
                     </Grid.Row>

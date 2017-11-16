@@ -31,7 +31,7 @@ const NavBarMobile = ({children, leftItems, onPusherClick, onToggle, rightItems,
             <Icon name="sidebar" />
           </Menu.Item>
           <Menu.Item>
-            <Image size="mini" src="../images/CHED.png" href='/' />
+            <Image size="mini" src="images/CHED.png" href='/' />
           </Menu.Item>
           <Menu.Menu position="right">
             {_.map(rightItems, item => <Menu.Item {...item} />)}
@@ -45,7 +45,7 @@ const NavBarMobile = ({children, leftItems, onPusherClick, onToggle, rightItems,
   const NavBarDesktop = ({ leftItems, rightItems }) => (
     <Menu fixed="top" borderless>
       <Menu.Item>
-        <Image size="medium" className="logo-desktop" src="../images/CHED-PCARI.png" href='/'/>
+        <Image size="medium" className="logo-desktop" src="images/CHED-PCARI.png" href='/'/>
       </Menu.Item>
       
       {_.map(leftItems, item => <Menu.Item {...item} />)}
