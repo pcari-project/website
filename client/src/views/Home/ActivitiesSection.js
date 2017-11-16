@@ -107,14 +107,14 @@ class ActivitiesSection extends Component {
         });
 
         return (
-            <Container className='body'>
+            <Container className='body-container'>
                 <Header as='h2' textAlign='center'>Recent Activities</Header>
                 <Card.Group stackable itemsPerRow={4}>
                     {item}
                 </Card.Group>
 
                 <Container textAlign='center'>
-                    <Menu pagination className='menu'>
+                    <Menu pagination className='pagination'>
                         <Menu.Item as='a' onClick={this.handleItemClickLeft} icon>
                             <Icon name='left chevron' />
                         </Menu.Item>

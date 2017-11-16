@@ -109,7 +109,7 @@ class Activities extends Component{
         });
 
         return(
-            <Container className='body'>
+            <Container className='body-container'>
                 <Header as='h2'>Activities</Header>
                 <Item.Group divided>
                     {item}  

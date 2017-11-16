@@ -35,7 +35,7 @@ class Contact extends Component {
     render() {
         const { name, email, subject, message } = this.state
         return (
-            <Container className='body'>
+            <Container className='body-container'>
                 <Header as='h2'>Contact</Header>
                 <Grid doubling columns={3}>
                     <Grid.Column>

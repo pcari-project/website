@@ -50,7 +50,7 @@ class ActivitiesPhotos extends Component {
             )
         })
         return(
-            <Container className='body'>
+            <Container className='body-container'>
                 <Header as='h2'>
                     <a href='/activities'><Icon name='arrow left' link title='Go to Activities'/></a>
                     <Header.Content>
