@@ -13,7 +13,7 @@ class Team extends Component{
     }
 
     fetch(serverUrl){
-        axios.get(`${serverUrl}?filter={"where":{"active":true}}`)
+        axios.get(`${serverUrl}`)
         .then(res => {
             this.setState({ data: res.data });
         })
@@ -32,48 +32,94 @@ class Team extends Component{
     render(){
         let currentData = this.state.data;
         
-        let item = currentData.map(team => {
-            return (
-                <Grid.Column>
-                    <Modal trigger={
-                        <Item.Group>
-                            <Item>
-                                <Item.Image size='tiny' src={team.image}/>
-            
-                                <Item.Content>
-                                    <Item as='a'>{team.name}</Item>
-                                    <p style={{fontStyle:'italic'}}>{team.designation}</p>
-                                </Item.Content>
-                            </Item>
-                        </Item.Group>
-                    } closeIcon>
-    
-                        <Modal.Header>{team.designation}</Modal.Header>
-                        
-                        <Modal.Content image scrolling>
-                            <Image src={team.image}height='160' />
+        // current team members
+        const currentMembers = currentData.map(team => {
+            if (team.active) {
+                return (
+                    <Grid.Column>
+                        <Modal trigger={
+                            <Item.Group>
+                                <Item>
+                                    <Item.Image size='tiny' src={team.image}/>
+                
+                                    <Item.Content>
+                                        <Item as='a'>{team.name}</Item>
+                                        <p style={{fontStyle:'italic'}}>{team.designation}</p>
+                                    </Item.Content>
+                                </Item>
+                            </Item.Group>
+                        } closeIcon>
         
-                            <Modal.Description>
-                                <Header>{team.name}
-                                    <Header.Subheader>
-                                        <Icon name='mail' /><a href={`mailto:${team.email}`}>{team.email}</a>
-                                    </Header.Subheader>
-                                </Header>
-                                <Divider />
-                                <ReactMarkdown source={team.profile} />
-                            </Modal.Description>
-                        </Modal.Content>
-                    </Modal>
-                </Grid.Column>
-            )
+                            <Modal.Header>{team.designation}</Modal.Header>
+                            
+                            <Modal.Content image scrolling>
+                                <Image src={team.image}height='160' />
+            
+                                <Modal.Description>
+                                    <Header>{team.name}
+                                        <Header.Subheader>
+                                            <Icon name='mail' /><a href={`mailto:${team.email}`}>{team.email}</a>
+                                        </Header.Subheader>
+                                    </Header>
+                                    <Divider />
+                                    <ReactMarkdown source={team.profile} />
+                                </Modal.Description>
+                            </Modal.Content>
+                        </Modal>
+                    </Grid.Column>
+                )
+            }else return void 0
+        });
+
+        // previous team members
+        const previousMembers = currentData.map(team => {
+            if (!team.active) {
+                return (
+                    <Grid.Column>
+                        <Modal trigger={
+                            <Item.Group>
+                                <Item>
+                                    <Item.Image size='tiny' src={team.image}/>
+                
+                                    <Item.Content>
+                                        <Item as='a'>{team.name}</Item>
+                                        <p style={{fontStyle:'italic'}}>{team.designation}</p>
+                                    </Item.Content>
+                                </Item>
+                            </Item.Group>
+                        } closeIcon>
+        
+                            <Modal.Header>{team.designation}</Modal.Header>
+                            
+                            <Modal.Content image scrolling>
+                                <Image src={team.image}height='160' />
+            
+                                <Modal.Description>
+                                    <Header>{team.name}
+                                        <Header.Subheader>
+                                            <Icon name='mail' /><a href={`mailto:${team.email}`}>{team.email}</a>
+                                        </Header.Subheader>
+                                    </Header>
+                                    <Divider />
+                                    <ReactMarkdown source={team.profile} />
+                                </Modal.Description>
+                            </Modal.Content>
+                        </Modal>
+                    </Grid.Column>
+                )
+            }else return void 0
         });
 
         return(
             <Container style={{padding: '1.75em'}}>
                 <Header as='h2'>The Team</Header>
-        
                 <Grid doubling columns={4}>
-                    {item}
+                    {currentMembers}
+                </Grid>
+
+                <Header as='h2'>Former Team Members</Header>
+                <Grid doubling columns={4}>
+                    {previousMembers}
                 </Grid>
             </Container>
         )
