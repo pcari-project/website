@@ -1,19 +1,20 @@
 {
-    "name": "pcari-project-website",
-    "version": "0.0.1",
-    "description": "PCARI Project Website",
-    "dependencies": {
-      "foreman": "^2.0.0",
-      "nodemon": "^1.12.1"
-    },
-    "devDependencies": {},
-    "scripts": {
-      "start": "nf start -p 3000"
-    },
-    "repository": {
-      "type": "git",
-      "url": "https://github.com/pcari-project/website.git"
-    },
-    "author": "Erin Cuenco",
-    "license": "UNLICENSED"
-  }
+  "name": "pcari-project-website",
+  "version": "0.0.1",
+  "description": "PCARI Project Website",
+  "dependencies": {
+    "foreman": "^2.0.0",
+    "nodemon": "^1.12.1",
+    "webpack": "^3.8.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "nf start -p 3000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pcari-project/website.git"
+  },
+  "author": "Erin Cuenco",
+  "license": "UNLICENSED"
+}
