@@ -4,11 +4,11 @@
   "description": "PCARI Project Website",
   "dependencies": {
     "foreman": "^2.0.0",
-    "nodemon": "^1.12.1"
+    "nodemon": "^1.12.1",
+    "webpack-dev-server": "^2.9.4"
   },
   "devDependencies": {
-    "webpack": "^3.8.1",
-    "webpack-dev-server": "^2.9.4"
+    "webpack": "^3.8.1"
   },
   "scripts": {
     "start": "nf start -p 3000"
