@@ -4,8 +4,7 @@
   "description": "PCARI Project Website",
   "dependencies": {
     "foreman": "^2.0.0",
-    "nodemon": "^1.12.1",
-    "webpack": "^3.8.1"
+    "nodemon": "^1.12.1"
   },
   "devDependencies": {},
   "scripts": {
