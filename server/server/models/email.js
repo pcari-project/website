@@ -6,15 +6,23 @@ module.exports = function(Email) {
         // console.log(req.body);
         const { name, email, subject, message} = req.body;
         const output = `
-            <strong>Name:</strong> ${name}<br>
-            <strong>Email:</strong> ${email}<br><br>
-            <strong>Subject:</strong> ${subject}<br>
-            <strong>Message:</strong> ${message}
+            <div style="background:#eee">
+                <div style="font-family:Roboto,Arial,Helvetica,sans-serif;font-size:15px;line-height:18px;background:#eee;margin:auto;padding:8px;max-width:500px">
+                    <div style="padding:6px 0 14px 16px">
+                        <a href="https://wiseir.herokuapp.com"><img src="https://goo.gl/G8EE4U" height="78" /></a>
+                        <div style="background:#fff;padding:16px;">
+                            <div style="margin:16px 0 24px 0;font-size:32px;font-weight:bold;">${subject}</div>
+                            <div style="color:#555;">${message}</div>
+                            <div style="font-size:13.5px;margin:30px 0;color:#777">${name}<br>${email}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         `;
         Email.app.models.Email.send({
             to: 'projectpcari@gmail.com',
-            from: '"New Message" <projectpcari@gmail.com>',
-            subject: subject,
+            from: '"WISEIr" <projectpcari@gmail.com>',
+            subject: 'You have a new message',
             html: output
         }, function(err, mail) {
             if(err){
