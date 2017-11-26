@@ -63,7 +63,7 @@ class ActivitiesPhotos extends Component {
                     </Header.Content>
                 </Header>
 
-                <Grid doubling columns={4}>
+                <Grid stackable columns={4}>
                     {photo}
                 </Grid>
             </Container>
