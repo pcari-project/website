@@ -20,8 +20,8 @@ module.exports = function(Email) {
             </div>
         `;
         Email.app.models.Email.send({
-            to: 'projectpcari@gmail.com',
-            from: '"WISEIr" <projectpcari@gmail.com>',
+            to: 'pcari.wiseir@gmail.com',
+            from: '"WISEIr" <pcari.wiseir@gmail.com>',
             subject: 'You have a new message',
             html: output
         }, function(err, mail) {

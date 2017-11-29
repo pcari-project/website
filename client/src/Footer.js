@@ -22,7 +22,7 @@ const Footer = () =>
                             <Header inverted as='h4' content='CONTACT' />
                             <List>
                                 <List.Item icon='marker' content='CEAT Building A Room 110, LWRD, IAE, CEAT, University of the Philippines Los Baños (UPLB)' />
-                                <List.Item icon='mail' content={<a href='mailto:pcari-project@gmail.com'>pcari-project@gmail.com</a>} />
+                                <List.Item icon='mail' content={<a href='mailto:pcari.wiseir@gmail.com'>pcari.wiseir@gmail.com</a>} />
                                 <List.Item icon='phone' content='(63-49)-536-2387' />
                             </List>
                         </Grid.Column>

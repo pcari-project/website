@@ -45,7 +45,7 @@ class Contact extends Component {
                             Mail
                         </Header.Content>
                         <Header.Subheader>
-                            <a href='mailto:pcari-project@gmail.com'>pcari-project@gmail.com</a>
+                            <a href='mailto:pcari.wiseir@gmail.com'>pcari.wiseir@gmail.com</a>
                         </Header.Subheader>
                     </Header>
                     </Grid.Column>
