@@ -9,7 +9,7 @@ module.exports = function(Email) {
             <div style="background:#eee">
                 <div style="font-family:Roboto,Arial,Helvetica,sans-serif;font-size:15px;line-height:18px;background:#eee;margin:auto;padding:8px;max-width:500px">
                     <div style="padding:6px 0 14px 16px">
-                        <a href="https://wiseir.herokuapp.com"><img src="https://goo.gl/G8EE4U" height="78" /></a>
+                        <a href="https://wiseir.herokuapp.com"><img src="https://i.imgur.com/OA8Pkws.png" height="78" /></a>
                         <div style="background:#fff;padding:16px;">
                             <div style="margin:16px 0 24px 0;font-size:32px;font-weight:bold;">${subject}</div>
                             <div style="color:#555;">${message}</div>
